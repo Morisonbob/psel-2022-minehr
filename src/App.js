@@ -1,9 +1,25 @@
+import React from "react";
+import Bar from './Bar'
+import Scatter from './Scatter'
 
 function App() {
   return (
     <div>
-      <h1>Teste Basico de funcionamento</h1>
+      {/*TODO: Fix Navbar */}
+      <nav>
+        <div>
+          Dashboard
+          <button>Filtrar</button>
+        </div>
+        Desáfio frontend MINEHR
+      </nav>
+      <div>
+        <Bar />
+        <Scatter />
+      </div>
+
     </div>
+
   );
 }
 
