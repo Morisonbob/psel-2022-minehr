@@ -14,7 +14,8 @@ class Bar extends React.Component {
             options: {
                 chart: {
                     type: 'bar',
-                    height: 350
+                    height: 350,
+                    width: '100%'
                 },
                 plotOptions: {
                     bar: {
