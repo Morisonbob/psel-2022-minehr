@@ -1,4 +1,4 @@
-##Processo Seletico MINEHR 2022.2
+##Processo Seletivo MINEHR 2022.2
 
 Pequena aplicação feita em React.js que mostra dos gráficos do ApexGraphs.
 
