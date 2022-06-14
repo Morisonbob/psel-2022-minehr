@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
-import { FaFilter } from 'react-icons/fa'
 
 
 class Bar extends React.Component {
@@ -17,6 +16,7 @@ class Bar extends React.Component {
                     type: 'bar',
                     width: "100%",
                     height: 350,
+                    foreColor: '#fca311',
                     toolbar: {
                         show: true,
                         offsetX: 0,
@@ -48,7 +48,7 @@ class Bar extends React.Component {
                     align: 'left',
                     style: {
                         fontSize: '20px',
-                        color: '#588'
+                        color: '#8ecae6'
 
                     }
                 },

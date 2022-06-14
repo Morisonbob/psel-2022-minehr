@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 
 class Scatter extends React.Component {
@@ -25,6 +25,7 @@ class Scatter extends React.Component {
                     width: "100%",
                     height: 350,
                     type: 'scatter',
+                    foreColor: '#fca311',
                     zoom: {
                         enabled: true,
                         type: 'xy'
@@ -55,12 +56,13 @@ class Scatter extends React.Component {
                         }
                     },
                 },
+                colors: ['#ffb703', '#fb8500', '#219ebc'],
                 title: {
                     text: 'Scatter',
                     align: 'left',
                     style: {
                         fontSize: '20px',
-                        color: '#588'
+                        color: '#8ecae6'
                     }
                 },
                 xaxis: {
