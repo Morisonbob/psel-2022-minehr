@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import { FaFilter } from 'react-icons/fa'
 
 
 class Bar extends React.Component {
@@ -14,8 +15,42 @@ class Bar extends React.Component {
             options: {
                 chart: {
                     type: 'bar',
+                    width: "100%",
                     height: 350,
-                    width: '100%'
+                    toolbar: {
+                        show: true,
+                        offsetX: 0,
+                        offsetY: 0,
+                        tools: {
+                            download: true,
+                            selection: false,
+                            zoom: false,
+                            zoomin: false,
+                            zoomout: false,
+                            pan: false,
+                            reset: false | '<img src="/static/icons/reset.png" width="20">',
+                            customIcons: [
+                                {
+                                    icon: '<img src="https://img.icons8.com/external-others-inmotus-design/344/external-info-buttons-others-inmotus-design.png" width="20">',
+                                    index: -1,
+                                    title: 'Mais informações',
+                                    class: 'custom-icon',
+                                    click: function (e) {
+                                        alert("Informações não disponíveis nesta versão!")
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                },
+                title: {
+                    text: `Barras`,
+                    align: 'left',
+                    style: {
+                        fontSize: '20px',
+                        color: '#588'
+
+                    }
                 },
                 plotOptions: {
                     bar: {
@@ -44,7 +79,8 @@ class Bar extends React.Component {
                             options={this.state.options}
                             series={this.state.series}
                             type="bar"
-                            width="500"
+                            width="100%"
+                            height="350px"
                         />
                     </div>
                 </div>

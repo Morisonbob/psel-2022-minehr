@@ -22,24 +22,30 @@ function App() {
 
 
 const StyleCard = styled.div`
-width: 45%;
 background-color: pink;
-margin: 5.5vh;
-padding: 1.5vh;
+margin-top: 5vh;
+padding: 3vh;
 border-radius: 3%;
-min-width: 300px;
-max-width: 500px;
-`;
+max-width: 1230px;
+width: 46%;
+height: 90%;
+@media screen and (max-width: 1230px){
+  width: 100%;
+}`;
 
 const StyleApp = styled.div`
 min-height: 100vh;
-padding: 0vh 3vh;
 background-color: aliceblue;
+@media screen and (max-width: 1230px){
+ .graphs{
+   flex-direction: column;
+ } 
+}
 .graphs{
   display: flex;
-  justify-content: center;
-
-}
-`;
+  justify-content: space-between;
+  padding: 0vh 3vh;
+  height: 380px;
+}`;
 
 export default App;

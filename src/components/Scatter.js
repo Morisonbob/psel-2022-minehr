@@ -22,6 +22,7 @@ class Scatter extends React.Component {
             }],
             options: {
                 chart: {
+                    width: "100%",
                     height: 350,
                     type: 'scatter',
                     zoom: {
@@ -40,14 +41,27 @@ class Scatter extends React.Component {
                             zoomout: false,
                             pan: false,
                             reset: false | '<img src="/static/icons/reset.png" width="20">',
-                            customIcons: [{
-                                icon: '<img src="https://1.bp.blogspot.com/-kfLR3BFiJyQ/W-t5rI1DknI/AAAAAAABIPM/b_ftKMT8k_AZKmyTRO7sW2dw8LdFy_UZQCLcBGAs/s1600/ALFABETO-C%25C3%258DRCULOS-REDONDOS-REDONDO-C%25C3%258DRCULO-PNG-FUNDO-TRANSPARENTE-VETOR-LETRAS-COLORIDAS-ALFABETO-ABECED%25C3%2581RIO-FREE-GR%25C3%2581TIS-CLIPART-ABC%2B%25281%2529.png" width="20">',
-                                index: 1,
-                                title: 'tooltip of the icon',
-                                class: 'custom-icon',
-                            }]
+                            customIcons: [
+                                {
+                                    icon: '<img src="https://img.icons8.com/external-others-inmotus-design/344/external-info-buttons-others-inmotus-design.png" width="20">',
+                                    index: -1,
+                                    title: 'Mais informações',
+                                    class: 'custom-icon',
+                                    click: function (e) {
+                                        alert("Informações não disponíveis nesta versão!")
+                                    }
+                                }
+                            ]
                         }
                     },
+                },
+                title: {
+                    text: 'Scatter',
+                    align: 'left',
+                    style: {
+                        fontSize: '20px',
+                        color: '#588'
+                    }
                 },
                 xaxis: {
                     tickAmount: 10,
@@ -76,7 +90,8 @@ class Scatter extends React.Component {
                             options={this.state.options}
                             series={this.state.series}
                             type="scatter"
-                            width="500"
+                            width="100%"
+                            height="350px"
                         />
                     </div>
                 </div>
